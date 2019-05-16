@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     Boolean[] State;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,8 +73,12 @@ public class MainActivity extends AppCompatActivity {
         final ToggleButton toggle_7 = (ToggleButton) findViewById(R.id.Button_7);
         final ToggleButton toggle_8 = (ToggleButton) findViewById(R.id.Button_8);
         final ToggleButton toggle_9 = (ToggleButton) findViewById(R.id.Button_9);
+        final ToggleButton toggle_10 = (ToggleButton) findViewById(R.id.Button_10); //true
+        final ToggleButton toggle_11 = (ToggleButton) findViewById(R.id.Button_11); //false
 
-        toggle_5.setChecked(true);
+        toggle_10.setEnabled(false);
+        toggle_11.setEnabled(false);
+
 
         toggle_1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -90,8 +95,16 @@ public class MainActivity extends AppCompatActivity {
 
                     toggle_8.setEnabled(false);
 
-                    toggle_9.setChecked(true);
-                    toggle_7.setChecked(true);
+                    if (toggle_9 == toggle_10) {
+                        toggle_9.setChecked(false);
+                    } else{
+                        toggle_9.setChecked(true);
+                    }
+                    if (toggle_7 == toggle_10) {
+                        toggle_7.setChecked(false);
+                    } else{
+                        toggle_7.setChecked(true);
+                    }
 
                     try {
                         Thread.sleep(5);
@@ -125,8 +138,19 @@ public class MainActivity extends AppCompatActivity {
 
                     toggle_8.setEnabled(false);
 
-                    toggle_9.setChecked(false);
-                    toggle_7.setChecked(false);
+                    if (toggle_9 == toggle_11) {
+                        toggle_9.setChecked(true);
+                    } else{
+                        toggle_9.setChecked(false);
+                    }
+                    if (toggle_7 == toggle_11) {
+                        toggle_7.setChecked(true);
+                    } else{
+                        toggle_7.setChecked(false);
+                    }
+
+
+
 
                     try {
                         Thread.sleep(5);
@@ -163,8 +187,17 @@ public class MainActivity extends AppCompatActivity {
                     toggle_8.setEnabled(false);
                     toggle_9.setEnabled(false);
 
-                    toggle_5.setChecked(true);
-                    toggle_3.setChecked(true);
+
+                    if (toggle_5 == toggle_10) {
+                        toggle_5.setChecked(false);
+                    } else{
+                        toggle_5.setChecked(true);
+                    }
+                    if (toggle_3 == toggle_10) {
+                        toggle_3.setChecked(false);
+                    } else{
+                        toggle_3.setChecked(true);
+                    }
 
                     try {
                         Thread.sleep(5);
@@ -198,8 +231,16 @@ public class MainActivity extends AppCompatActivity {
                     toggle_8.setEnabled(false);
                     toggle_9.setEnabled(false);
 
-                    toggle_5.setChecked(false);
-                    toggle_3.setChecked(false);
+                    if (toggle_5 == toggle_11) {
+                        toggle_5.setChecked(true);
+                    } else{
+                        toggle_5.setChecked(false);
+                    }
+                    if (toggle_3 == toggle_11) {
+                        toggle_3.setChecked(true);
+                    } else{
+                        toggle_3.setChecked(false);
+                    }
 
                     try {
                         Thread.sleep(5);
@@ -236,9 +277,21 @@ public class MainActivity extends AppCompatActivity {
                     toggle_8.setEnabled(false);
                     toggle_9.setEnabled(false);
 
-                    toggle_2.setChecked(true);
-                    toggle_6.setChecked(true);
-                    toggle_4.setChecked(true);
+                    if (toggle_2 == toggle_10) {
+                        toggle_2.setChecked(false);
+                    } else{
+                        toggle_2.setChecked(true);
+                    }
+                    if (toggle_6 == toggle_10) {
+                        toggle_6.setChecked(false);
+                    } else{
+                        toggle_6.setChecked(true);
+                    }
+                    if (toggle_4 == toggle_10) {
+                        toggle_4.setChecked(false);
+                    } else{
+                        toggle_4.setChecked(true);
+                    }
 
                     try {
                         Thread.sleep(5);
@@ -272,9 +325,21 @@ public class MainActivity extends AppCompatActivity {
                     toggle_8.setEnabled(false);
                     toggle_9.setEnabled(false);
 
-                    toggle_2.setChecked(false);
-                    toggle_6.setChecked(false);
-                    toggle_4.setChecked(false);
+                    if (toggle_2 == toggle_11) {
+                        toggle_2.setChecked(true);
+                    } else{
+                        toggle_2.setChecked(false);
+                    }
+                    if (toggle_6 == toggle_11) {
+                        toggle_6.setChecked(true);
+                    } else{
+                        toggle_6.setChecked(false);
+                    }
+                    if (toggle_4 == toggle_11) {
+                        toggle_4.setChecked(true);
+                    } else{
+                        toggle_4.setChecked(false);
+                    }
 
                     try {
                         Thread.sleep(5);
@@ -309,8 +374,16 @@ public class MainActivity extends AppCompatActivity {
                     toggle_8.setEnabled(false);
                     toggle_9.setEnabled(false);
 
-                    toggle_3.setChecked(true);
-                    toggle_7.setChecked(true);
+                    if (toggle_3 == toggle_10) {
+                        toggle_3.setChecked(false);
+                    } else{
+                        toggle_3.setChecked(true);
+                    }
+                    if (toggle_7 == toggle_10) {
+                        toggle_7.setChecked(false);
+                    } else{
+                        toggle_7.setChecked(true);
+                    }
 
                     try {
                         Thread.sleep(5);
@@ -344,8 +417,16 @@ public class MainActivity extends AppCompatActivity {
                     toggle_8.setEnabled(false);
                     toggle_9.setEnabled(false);
 
-                    toggle_7.setChecked(false);
-                    toggle_3.setChecked(false);
+                    if (toggle_3 == toggle_11) {
+                        toggle_3.setChecked(true);
+                    } else{
+                        toggle_3.setChecked(false);
+                    }
+                    if (toggle_7 == toggle_11) {
+                        toggle_7.setChecked(true);
+                    } else{
+                        toggle_7.setChecked(false);
+                    }
 
                     try {
                         Thread.sleep(5);
@@ -381,9 +462,21 @@ public class MainActivity extends AppCompatActivity {
 
                     toggle_9.setEnabled(false);
 
-                    toggle_2.setChecked(true);
-                    toggle_6.setChecked(true);
-                    toggle_8.setChecked(true);
+                    if (toggle_2 == toggle_10) {
+                        toggle_2.setChecked(false);
+                    } else{
+                        toggle_2.setChecked(true);
+                    }
+                    if (toggle_6 == toggle_10) {
+                        toggle_6.setChecked(false);
+                    } else{
+                        toggle_6.setChecked(true);
+                    }
+                    if (toggle_8 == toggle_10) {
+                        toggle_8.setChecked(false);
+                    } else{
+                        toggle_8.setChecked(true);
+                    }
 
                     try {
                         Thread.sleep(5);
@@ -417,9 +510,22 @@ public class MainActivity extends AppCompatActivity {
 
                     toggle_9.setEnabled(false);
 
-                    toggle_2.setChecked(false);
-                    toggle_6.setChecked(false);
-                    toggle_8.setChecked(false);
+                    if (toggle_2 == toggle_11) {
+                        toggle_2.setChecked(true);
+                    } else{
+                        toggle_2.setChecked(false);
+                    }
+                    if (toggle_6 == toggle_11) {
+                        toggle_6.setChecked(true);
+                    } else{
+                        toggle_6.setChecked(false);
+                    }
+                    if (toggle_8 == toggle_11) {
+                        toggle_8.setChecked(true);
+                    } else{
+                        toggle_8.setChecked(false);
+                    }
+
 
                     try {
                         Thread.sleep(5);
@@ -454,18 +560,34 @@ public class MainActivity extends AppCompatActivity {
 
                     toggle_8.setEnabled(false);
 
-                    toggle_9.setChecked(true);
-                    toggle_5.setChecked(true);
-                    toggle_3.setChecked(true);
-                    toggle_7.setChecked(true);
+                    if (toggle_9 == toggle_10) {
+                        toggle_9.setChecked(false);
+                    } else{
+                        toggle_9.setChecked(true);
+                    }
+                    if (toggle_5 == toggle_10) {
+                        toggle_5.setChecked(false);
+                    } else{
+                        toggle_5.setChecked(true);
+                    }
+                    if (toggle_3 == toggle_10) {
+                        toggle_3.setChecked(false);
+                    } else{
+                        toggle_3.setChecked(true);
+                    }
+                    if (toggle_7 == toggle_10) {
+                        toggle_7.setChecked(false);
+                    } else{
+                        toggle_7.setChecked(true);
+                    }
 
-                 //   try {
-                    //      Thread.sleep(5);
-                 //   } catch (InterruptedException e) {
-                 //       e.printStackTrace();
-                 //   }
+                 try {
+                         Thread.sleep(5);
+                    } catch (InterruptedException e) {
+                       e.printStackTrace();
+                    }
 
-                 //   toggle_1.setEnabled(true);toggle_2.setEnabled(true); toggle_3.setEnabled(true);toggle_4.setEnabled(true);toggle_5.setEnabled(true);toggle_6.setEnabled(true);toggle_7.setEnabled(true);toggle_8.setEnabled(true);toggle_9.setEnabled(true);
+                 toggle_1.setEnabled(true);toggle_2.setEnabled(true); toggle_3.setEnabled(true);toggle_4.setEnabled(true);toggle_5.setEnabled(true);toggle_6.setEnabled(true);toggle_7.setEnabled(true);toggle_8.setEnabled(true);toggle_9.setEnabled(true);
 
 
                     state[5] = true;
@@ -483,10 +605,26 @@ public class MainActivity extends AppCompatActivity {
 
                     toggle_8.setEnabled(false);
 
-                    toggle_9.setChecked(false);
-                    toggle_5.setChecked(false);
-                    toggle_3.setChecked(false);
-                    toggle_7.setChecked(false);
+                    if (toggle_9 == toggle_11) {
+                        toggle_9.setChecked(true);
+                    } else{
+                        toggle_9.setChecked(false);
+                    }
+                    if (toggle_5 == toggle_11) {
+                        toggle_5.setChecked(true);
+                    } else{
+                        toggle_5.setChecked(false);
+                    }
+                    if (toggle_3 == toggle_11) {
+                        toggle_3.setChecked(true);
+                    } else{
+                        toggle_3.setChecked(false);
+                    }
+                    if (toggle_7 == toggle_11) {
+                        toggle_7.setChecked(true);
+                    } else{
+                        toggle_7.setChecked(false);
+                    }
 
                     try {
                         Thread.sleep(5);
@@ -494,7 +632,7 @@ public class MainActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
 
-                    // toggle_1.setEnabled(true);toggle_2.setEnabled(true);toggle_3.setEnabled(true);toggle_4.setEnabled(true);toggle_5.setEnabled(true);toggle_6.setEnabled(true);toggle_7.setEnabled(true);toggle_8.setEnabled(true);toggle_9.setEnabled(true);
+                     toggle_1.setEnabled(true);toggle_2.setEnabled(true);toggle_3.setEnabled(true);toggle_4.setEnabled(true);toggle_5.setEnabled(true);toggle_6.setEnabled(true);toggle_7.setEnabled(true);toggle_8.setEnabled(true);toggle_9.setEnabled(true);
 
                 }
             }
@@ -515,9 +653,21 @@ public class MainActivity extends AppCompatActivity {
                     toggle_8.setEnabled(false);
                     toggle_9.setEnabled(false);
 
-                    toggle_4.setChecked(true);
-                    toggle_6.setChecked(true);
-                    toggle_1.setChecked(true);
+                    if (toggle_4 == toggle_10) {
+                        toggle_4.setChecked(false);
+                    } else{
+                        toggle_4.setChecked(true);
+                    }
+                    if (toggle_6 == toggle_10) {
+                        toggle_6.setChecked(false);
+                    } else{
+                        toggle_6.setChecked(true);
+                    }
+                    if (toggle_1 == toggle_10) {
+                        toggle_1.setChecked(false);
+                    } else{
+                        toggle_1.setChecked(true);
+                    }
 
                     try {
                         Thread.sleep(5);
@@ -525,7 +675,7 @@ public class MainActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
 
-                    // toggle_1.setEnabled(true);toggle_2.setEnabled(true);toggle_3.setEnabled(true);toggle_4.setEnabled(true);toggle_5.setEnabled(true);toggle_6.setEnabled(true);toggle_7.setEnabled(true);toggle_8.setEnabled(true);toggle_9.setEnabled(true);
+                    toggle_1.setEnabled(true);toggle_2.setEnabled(true);toggle_3.setEnabled(true);toggle_4.setEnabled(true);toggle_5.setEnabled(true);toggle_6.setEnabled(true);toggle_7.setEnabled(true);toggle_8.setEnabled(true);toggle_9.setEnabled(true);
 
                     state[6] = true;
                 } else {
@@ -543,9 +693,21 @@ public class MainActivity extends AppCompatActivity {
                     toggle_8.setEnabled(false);
                     toggle_9.setEnabled(false);
 
-                    toggle_4.setChecked(false);
-                    toggle_6.setChecked(false);
-                    toggle_1.setChecked(false);
+                    if (toggle_4 == toggle_11) {
+                        toggle_4.setChecked(true);
+                    } else{
+                        toggle_4.setChecked(false);
+                    }
+                    if (toggle_6 == toggle_11) {
+                        toggle_6.setChecked(true);
+                    } else{
+                        toggle_6.setChecked(false);
+                    }
+                    if (toggle_1 == toggle_11) {
+                        toggle_1.setChecked(true);
+                    } else{
+                        toggle_1.setChecked(false);
+                    }
 
                     try {
                         Thread.sleep(5);
@@ -553,14 +715,14 @@ public class MainActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
 
-                    //toggle_1.setEnabled(true);toggle_2.setEnabled(true);toggle_3.setEnabled(true);toggle_4.setEnabled(true);toggle_5.setEnabled(true);toggle_6.setEnabled(true);toggle_7.setEnabled(true);toggle_8.setEnabled(true);toggle_9.setEnabled(true);
+                    toggle_1.setEnabled(true);toggle_2.setEnabled(true);toggle_3.setEnabled(true);toggle_4.setEnabled(true);toggle_5.setEnabled(true);toggle_6.setEnabled(true);toggle_7.setEnabled(true);toggle_8.setEnabled(true);toggle_9.setEnabled(true);
                 }
             }
         });
         toggle_8.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-                    //https://developer.android.com/guide/topics/ui/controls/togglebutton#java
+                    https://developer.android.com/guide/topics/ui/controls/togglebutton#java
 
 
                     toggle_1.setEnabled(false);
@@ -572,8 +734,16 @@ public class MainActivity extends AppCompatActivity {
                     toggle_7.setEnabled(false);
 
 
-                    toggle_5.setChecked(true);
-                    toggle_9.setChecked(true);
+                    if (toggle_5 == toggle_10) {
+                        toggle_5.setChecked(false);
+                    } else{
+                        toggle_5.setChecked(true);
+                    }
+                    if (toggle_9 == toggle_10) {
+                        toggle_9.setChecked(false);
+                    } else{
+                        toggle_9.setChecked(true);
+                    }
 
                     try {
                         Thread.sleep(5);
@@ -581,7 +751,7 @@ public class MainActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
 
-                    // toggle_1.setEnabled(true);toggle_2.setEnabled(true);toggle_3.setEnabled(true);toggle_4.setEnabled(true);toggle_5.setEnabled(true);toggle_6.setEnabled(true);toggle_7.setEnabled(true);toggle_8.setEnabled(true);toggle_9.setEnabled(true);
+                    toggle_1.setEnabled(true);toggle_2.setEnabled(true);toggle_3.setEnabled(true);toggle_4.setEnabled(true);toggle_5.setEnabled(true);toggle_6.setEnabled(true);toggle_7.setEnabled(true);toggle_8.setEnabled(true);toggle_9.setEnabled(true);
 
                     state[7] = true;
                 } else {
@@ -598,8 +768,16 @@ public class MainActivity extends AppCompatActivity {
                     toggle_7.setEnabled(false);
 
 
-                    toggle_5.setChecked(false);
-                    toggle_9.setChecked(false);
+                    if (toggle_5 == toggle_11) {
+                        toggle_5.setChecked(true);
+                    } else{
+                        toggle_5.setChecked(false);
+                    }
+                    if (toggle_9 == toggle_11) {
+                        toggle_9.setChecked(true);
+                    } else{
+                        toggle_9.setChecked(false);
+                    }
 
                     try {
                         Thread.sleep(5);
@@ -607,7 +785,7 @@ public class MainActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
 
-                    // toggle_1.setEnabled(true);toggle_2.setEnabled(true);toggle_3.setEnabled(true);toggle_4.setEnabled(true);toggle_5.setEnabled(true);toggle_6.setEnabled(true);toggle_7.setEnabled(true);toggle_8.setEnabled(true);toggle_9.setEnabled(true);
+                    toggle_1.setEnabled(true);toggle_2.setEnabled(true);toggle_3.setEnabled(true);toggle_4.setEnabled(true);toggle_5.setEnabled(true);toggle_6.setEnabled(true);toggle_7.setEnabled(true);toggle_8.setEnabled(true);toggle_9.setEnabled(true);
 
                 }
             }
@@ -628,9 +806,21 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-                    toggle_1.setChecked(true);
-                    toggle_6.setChecked(true);
-                    toggle_8.setChecked(true);
+                    if (toggle_8 == toggle_10) {
+                        toggle_8.setChecked(false);
+                    } else{
+                        toggle_8.setChecked(true);
+                    }
+                    if (toggle_6 == toggle_10) {
+                        toggle_6.setChecked(false);
+                    } else{
+                        toggle_6.setChecked(true);
+                    }
+                    if (toggle_1 == toggle_10) {
+                        toggle_1.setChecked(false);
+                    } else{
+                        toggle_1.setChecked(true);
+                    }
 
 
                     try {
@@ -639,7 +829,7 @@ public class MainActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
 
-                    // toggle_1.setEnabled(true);toggle_2.setEnabled(true);toggle_3.setEnabled(true);toggle_4.setEnabled(true);toggle_5.setEnabled(true);toggle_6.setEnabled(true);toggle_7.setEnabled(true);toggle_8.setEnabled(true);toggle_9.setEnabled(true);
+                    toggle_1.setEnabled(true);toggle_2.setEnabled(true);toggle_3.setEnabled(true);toggle_4.setEnabled(true);toggle_5.setEnabled(true);toggle_6.setEnabled(true);toggle_7.setEnabled(true);toggle_8.setEnabled(true);toggle_9.setEnabled(true);
 
                     state[8] = true;
                 } else {
@@ -657,9 +847,21 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-                    toggle_1.setChecked(false);
-                    toggle_6.setChecked(false);
-                    toggle_8.setChecked(false);
+                    if (toggle_8 == toggle_11) {
+                        toggle_8.setChecked(true);
+                    } else{
+                        toggle_8.setChecked(false);
+                    }
+                    if (toggle_6 == toggle_11) {
+                        toggle_6.setChecked(true);
+                    } else{
+                        toggle_6.setChecked(false);
+                    }
+                    if (toggle_1 == toggle_11) {
+                        toggle_1.setChecked(true);
+                    } else{
+                        toggle_1.setChecked(false);
+                    }
 
                     try {
                         Thread.sleep(5);
@@ -667,7 +869,7 @@ public class MainActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
 
-                   // toggle_1.setEnabled(true);toggle_2.setEnabled(true);toggle_3.setEnabled(true);toggle_4.setEnabled(true);toggle_5.setEnabled(true);toggle_6.setEnabled(true);toggle_7.setEnabled(true);toggle_8.setEnabled(true);toggle_9.setEnabled(true);
+                    toggle_1.setEnabled(true);toggle_2.setEnabled(true);toggle_3.setEnabled(true);toggle_4.setEnabled(true);toggle_5.setEnabled(true);toggle_6.setEnabled(true);toggle_7.setEnabled(true);toggle_8.setEnabled(true);toggle_9.setEnabled(true);
                 }
             }
         });
@@ -675,6 +877,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+
 
 
 
