@@ -7,25 +7,44 @@
     tools:context=".MainActivity">
 
     <Button
-        android:layout_width="wrap_content"
         android:id="@+id/Finished"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="Complete?"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Button_3"
+        app:layout_constraintVertical_bias="0.123" />
+
+    <Button
+        android:id="@+id/Randomize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Mix it up a bit?"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/Reset"
+        app:layout_constraintTop_toBottomOf="@+id/Finished"
+        app:layout_constraintVertical_bias="0.501" />
 
     <Button
         android:id="@+id/Reset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:text="Need to restart?"
-        app:layout_constraintBottom_toTopOf="@+id/Instructions"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Finished" />
 
     <TextView
@@ -38,8 +57,10 @@
         android:text="Turn all the switches on!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Finished" />
+        app:layout_constraintTop_toBottomOf="@+id/Finished"
+        app:layout_constraintVertical_bias="0.245" />
 
     <ToggleButton
         android:id="@+id/Button_1"
@@ -58,6 +79,8 @@
         android:layout_height="wrap_content"
         android:textOn="@string/On"
         android:textOff="@string/Off"
+        android:drawableStart="@drawable/lamp"
+        android:drawableEnd="@drawable/lamp_off_2"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="4dp"
         app:layout_constraintEnd_toStartOf="@+id/Button_3"

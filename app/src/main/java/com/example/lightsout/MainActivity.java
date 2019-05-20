@@ -11,12 +11,14 @@ import android.widget.ToggleButton;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
+import java.util.Random;
 
 import static android.widget.Toast.LENGTH_LONG;
 
 public class MainActivity extends AppCompatActivity {
 
     Boolean[] State;
+    Boolean B = false;
 
 
     @Override
@@ -41,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
         final Button complete = findViewById(R.id.Finished);
         final Button reset = findViewById(R.id.Reset);
+        final Button random = findViewById(R.id.Randomize);
 
 
 
@@ -69,6 +72,24 @@ public class MainActivity extends AppCompatActivity {
                 toggle_7.setChecked(false);
                 toggle_8.setChecked(false);
                 toggle_9.setChecked(false);
+            }
+        });
+
+        random.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                toggle_1.setChecked(Math.random() > 0.5);
+                toggle_2.setChecked(Math.random() > 0.5);
+                toggle_3.setChecked(Math.random() > 0.5);
+                toggle_4.setChecked(Math.random() > 0.5);
+                toggle_5.setChecked(Math.random() > 0.5);
+                toggle_6.setChecked(Math.random() > 0.5);
+                toggle_7.setChecked(Math.random() > 0.5);
+                toggle_8.setChecked(Math.random() > 0.5);
+                toggle_9.setChecked(Math.random() > 0.5);
+
             }
         });
 
@@ -297,6 +318,8 @@ public class MainActivity extends AppCompatActivity {
                 // your click actions go here
             }
         });
+
+
 
 
 
