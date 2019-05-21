@@ -1,5 +1,8 @@
 package com.example.lightsout;
 
+import android.content.Context;
+import android.graphics.drawable.Drawable;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -19,12 +22,15 @@ public class MainActivity extends AppCompatActivity {
 
     Boolean[] State;
     Boolean B = false;
+    int on = R.drawable.lamp;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        final ToggleButton Expert = (ToggleButton) findViewById(R.id.Expert);
         final ToggleButton toggle_1 = (ToggleButton) findViewById(R.id.Button_1);
         final ToggleButton toggle_2 = (ToggleButton) findViewById(R.id.Button_2);
         final ToggleButton toggle_3 = (ToggleButton) findViewById(R.id.Button_3);
@@ -34,8 +40,9 @@ public class MainActivity extends AppCompatActivity {
         final ToggleButton toggle_7 = (ToggleButton) findViewById(R.id.Button_7);
         final ToggleButton toggle_8 = (ToggleButton) findViewById(R.id.Button_8);
         final ToggleButton toggle_9 = (ToggleButton) findViewById(R.id.Button_9);
-        final ToggleButton toggle_10 = (ToggleButton) findViewById(R.id.Button_10); //true
-        final ToggleButton toggle_11 = (ToggleButton) findViewById(R.id.Button_11); //false
+        final ToggleButton toggle_10 = (ToggleButton) findViewById(R.id.Button_10);
+        final ToggleButton toggle_11 = (ToggleButton) findViewById(R.id.Button_11);
+        final ToggleButton toggle_12 = (ToggleButton) findViewById(R.id.Button_12);
 
 
 
@@ -50,13 +57,19 @@ public class MainActivity extends AppCompatActivity {
         complete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (toggle_1.isChecked() && toggle_2.isChecked() && toggle_3.isChecked() && toggle_4.isChecked() && toggle_5.isChecked() && toggle_6.isChecked() && toggle_7.isChecked() && toggle_8.isChecked() && toggle_9.isChecked() ){
-                    Toast.makeText(MainActivity.this, "A winner is UwU", Toast.LENGTH_SHORT).show();
 
-                } else{
-                    Toast.makeText(MainActivity.this, "Try again", Toast.LENGTH_SHORT).show();
+              if(Expert.isChecked()) {
+                  if (toggle_1.isChecked() && toggle_2.isChecked() && toggle_3.isChecked() && toggle_4.isChecked() && toggle_5.isChecked() && toggle_6.isChecked() && toggle_7.isChecked() && toggle_8.isChecked() && toggle_9.isChecked() && toggle_10.isChecked() && toggle_11.isChecked() && toggle_12.isChecked()) {
+                      Toast.makeText(MainActivity.this, "A winner is UwU", Toast.LENGTH_SHORT).show();
 
-                }
+                  } else if (toggle_1.isChecked() && toggle_2.isChecked() && toggle_3.isChecked() && toggle_4.isChecked() && toggle_5.isChecked() && toggle_6.isChecked() && toggle_7.isChecked() && toggle_8.isChecked() && toggle_9.isChecked()) {
+                      Toast.makeText(MainActivity.this, "A winner is UwU", Toast.LENGTH_SHORT).show();
+
+
+                  } else {
+                      Toast.makeText(MainActivity.this, "Try again", Toast.LENGTH_SHORT).show();
+                  }
+              }
             }
         });
 
@@ -136,6 +149,8 @@ public class MainActivity extends AppCompatActivity {
                 }else{
                     toggle_5.setChecked(true);
                 }
+
+
 
                 // your click actions go here
             }

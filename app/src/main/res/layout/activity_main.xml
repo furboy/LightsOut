@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/lamp_off_2"
     tools:context=".MainActivity">
 
     <Button
@@ -17,13 +18,13 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Button_3"
-        app:layout_constraintVertical_bias="0.123" />
+        app:layout_constraintVertical_bias="0.238" />
 
     <Button
         android:id="@+id/Randomize"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="112dp"
+        android:layout_marginStart="116dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:text="Mix it up a bit?"
@@ -32,7 +33,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toEndOf="@+id/Reset"
         app:layout_constraintTop_toBottomOf="@+id/Finished"
-        app:layout_constraintVertical_bias="0.501" />
+        app:layout_constraintVertical_bias="0.291" />
 
     <Button
         android:id="@+id/Reset"
@@ -55,12 +56,26 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:text="Turn all the switches on!"
+        android:textColorHighlight="@color/colorText"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.697"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Finished"
-        app:layout_constraintVertical_bias="0.245" />
+        app:layout_constraintVertical_bias="0.796" />
+
+    <ToggleButton
+        android:id="@+id/Expert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="472dp"
+        android:layout_marginEnd="8dp"
+        android:textOff="Normal"
+        android:textOn="Expert Mode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ToggleButton
         android:id="@+id/Button_1"
@@ -79,8 +94,6 @@
         android:layout_height="wrap_content"
         android:textOn="@string/On"
         android:textOff="@string/Off"
-        android:drawableStart="@drawable/lamp"
-        android:drawableEnd="@drawable/lamp_off_2"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="4dp"
         app:layout_constraintEnd_toStartOf="@+id/Button_3"
@@ -89,11 +102,11 @@
     <ToggleButton
         android:id="@+id/Button_3"
         android:layout_width="wrap_content"
-        android:textOn="@string/On"
-        android:textOff="@string/Off"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="12dp"
+        android:textOff="@string/Off"
+        android:textOn="@string/On"
         app:layout_constraintEnd_toStartOf="@+id/Button_4"
         app:layout_constraintTop_toBottomOf="@+id/Button_6" />
 
@@ -167,31 +180,46 @@
         android:id="@+id/Button_10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="132dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:checked="true"
+        android:checked="false"
         android:textOff="@string/Off"
         android:textOn="@string/On"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/Finished"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/Button_11"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Button_2" />
 
     <ToggleButton
         android:id="@+id/Button_11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="132dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="88dp"
+        android:checked="false"
+        android:textOff="@string/Off"
+        android:textOn="@string/On"
+        app:layout_constraintEnd_toEndOf="@+id/Button_3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/Button_3"
+        app:layout_constraintTop_toBottomOf="@+id/Button_3" />
+
+    <ToggleButton
+        android:id="@+id/Button_12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="88dp"
         android:layout_marginBottom="8dp"
         android:checked="false"
         android:textOff="@string/Off"
         android:textOn="@string/On"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/Finished"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@+id/Button_11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/Button_11"
+        app:layout_constraintTop_toBottomOf="@+id/Button_4" />
 
 
 </android.support.constraint.ConstraintLayout>
