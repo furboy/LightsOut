@@ -45,6 +45,11 @@ public class MainActivity extends AppCompatActivity {
         final ToggleButton toggle_12 = (ToggleButton) findViewById(R.id.Button_12);
 
 
+        toggle_10.setVisibility(View.GONE);
+        toggle_11.setVisibility(View.GONE);
+        toggle_12.setVisibility(View.GONE);
+
+
 
 
 
@@ -58,11 +63,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-              if(Expert.isChecked()) {
-                  if (toggle_1.isChecked() && toggle_2.isChecked() && toggle_3.isChecked() && toggle_4.isChecked() && toggle_5.isChecked() && toggle_6.isChecked() && toggle_7.isChecked() && toggle_8.isChecked() && toggle_9.isChecked() && toggle_10.isChecked() && toggle_11.isChecked() && toggle_12.isChecked()) {
-                      Toast.makeText(MainActivity.this, "A winner is UwU", Toast.LENGTH_SHORT).show();
+              if(Expert.isChecked() && toggle_1.isChecked() && toggle_2.isChecked() && toggle_3.isChecked() && toggle_4.isChecked() && toggle_5.isChecked() && toggle_6.isChecked() && toggle_7.isChecked() && toggle_8.isChecked() && toggle_9.isChecked() && toggle_10.isChecked() && toggle_11.isChecked() && toggle_12.isChecked()) {
 
-                  } else if (toggle_1.isChecked() && toggle_2.isChecked() && toggle_3.isChecked() && toggle_4.isChecked() && toggle_5.isChecked() && toggle_6.isChecked() && toggle_7.isChecked() && toggle_8.isChecked() && toggle_9.isChecked()) {
+                  Toast.makeText(MainActivity.this, "A winner is UwU", Toast.LENGTH_SHORT).show();
+              }
+
+                  if (toggle_1.isChecked() && toggle_2.isChecked() && toggle_3.isChecked() && toggle_4.isChecked() && toggle_5.isChecked() && toggle_6.isChecked() && toggle_7.isChecked() && toggle_8.isChecked() && toggle_9.isChecked()) {
                       Toast.makeText(MainActivity.this, "A winner is UwU", Toast.LENGTH_SHORT).show();
 
 
@@ -70,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
                       Toast.makeText(MainActivity.this, "Try again", Toast.LENGTH_SHORT).show();
                   }
               }
-            }
+
         });
 
         reset.setOnClickListener(new View.OnClickListener() {
@@ -85,6 +91,9 @@ public class MainActivity extends AppCompatActivity {
                 toggle_7.setChecked(false);
                 toggle_8.setChecked(false);
                 toggle_9.setChecked(false);
+                toggle_10.setChecked(false);
+                toggle_11.setChecked(false);
+                toggle_12.setChecked(false);
             }
         });
 
@@ -92,8 +101,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                if (Expert.isChecked()) {
+                    toggle_1.setChecked(Math.random() > 0.5);
+                    toggle_2.setChecked(Math.random() > 0.5);
+                    toggle_3.setChecked(Math.random() > 0.5);
+                    toggle_4.setChecked(Math.random() > 0.5);
+                    toggle_5.setChecked(Math.random() > 0.5);
+                    toggle_6.setChecked(Math.random() > 0.5);
+                    toggle_7.setChecked(Math.random() > 0.5);
+                    toggle_8.setChecked(Math.random() > 0.5);
+                    toggle_9.setChecked(Math.random() > 0.5);
+                    toggle_10.setChecked(Math.random() > 0.5);
+                    toggle_11.setChecked(Math.random() > 0.5);
+                    toggle_12.setChecked(Math.random() > 0.5);
 
-                toggle_1.setChecked(Math.random() > 0.5);
+                } else {
+                    toggle_1.setChecked(Math.random() > 0.5);
                 toggle_2.setChecked(Math.random() > 0.5);
                 toggle_3.setChecked(Math.random() > 0.5);
                 toggle_4.setChecked(Math.random() > 0.5);
@@ -102,13 +125,36 @@ public class MainActivity extends AppCompatActivity {
                 toggle_7.setChecked(Math.random() > 0.5);
                 toggle_8.setChecked(Math.random() > 0.5);
                 toggle_9.setChecked(Math.random() > 0.5);
+            }
+
 
             }
         });
 
+        Expert.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (Expert.isChecked()) {
+                    toggle_10.setClickable(true);
+                    toggle_11.setClickable(true);
+                    toggle_12.setClickable(true);
+                    toggle_10.setVisibility(View.VISIBLE);
+                    toggle_11.setVisibility(View.VISIBLE);
+                    toggle_12.setVisibility(View.VISIBLE);
+                } else {
+                    toggle_10.setClickable(false);
+                    toggle_11.setClickable(false);
+                    toggle_12.setClickable(false);
+                    toggle_10.setVisibility(View.GONE);
+                    toggle_11.setVisibility(View.GONE);
+                    toggle_12.setVisibility(View.GONE);
 
-        toggle_10.setEnabled(false);
-        toggle_11.setEnabled(false);
+                }
+            }
+        });
+
+
+
 
 
         toggle_1.setOnClickListener(new View.OnClickListener()
@@ -150,6 +196,14 @@ public class MainActivity extends AppCompatActivity {
                     toggle_5.setChecked(true);
                 }
 
+                if(Expert.isChecked())
+                    if(toggle_10.isChecked()){
+                    toggle_10.setChecked(false);
+                        }else{
+                            toggle_10.setChecked(true);
+                }
+
+
 
 
                 // your click actions go here
@@ -178,6 +232,14 @@ public class MainActivity extends AppCompatActivity {
                     toggle_6.setChecked(true);
                 }
 
+                if(Expert.isChecked())
+                if(toggle_11.isChecked()){
+                    toggle_11.setChecked(false);
+                }else{
+                    toggle_11.setChecked(true);
+                }
+
+
                 // your click actions go here
             }
         });
@@ -198,6 +260,14 @@ public class MainActivity extends AppCompatActivity {
                 }else{
                     toggle_7.setChecked(true);
                 }
+
+                if(Expert.isChecked())
+                if(toggle_12.isChecked()){
+                    toggle_12.setChecked(false);
+                }else{
+                    toggle_12.setChecked(true);
+                }
+
 
                 // your click actions go here
             }
@@ -327,6 +397,83 @@ public class MainActivity extends AppCompatActivity {
                 }else{
                     toggle_8.setChecked(true);
                 }
+
+
+
+                // your click actions go here
+            }
+        });
+
+        toggle_10.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                if(toggle_2.isChecked()){
+                    toggle_2.setChecked(false);
+                }else{
+                    toggle_2.setChecked(true);
+                }
+
+
+                if(toggle_11.isChecked()){
+                    toggle_11.setChecked(false);
+                }else{
+                    toggle_11.setChecked(true);
+                }
+
+
+
+
+                // your click actions go here
+            }
+        });
+
+        toggle_11.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                if(toggle_3.isChecked()){
+                    toggle_3.setChecked(false);
+                }else{
+                    toggle_3.setChecked(true);
+                }
+
+                if(toggle_10.isChecked()){
+                    toggle_10.setChecked(false);
+                }else{
+                    toggle_10.setChecked(true);
+                }
+                if(toggle_12.isChecked()){
+                    toggle_12.setChecked(false);
+                }else{
+                    toggle_12.setChecked(true);
+                }
+
+
+
+                // your click actions go here
+            }
+        });
+
+        toggle_12.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                if(toggle_4.isChecked()){
+                    toggle_4.setChecked(false);
+                }else{
+                    toggle_4.setChecked(true);
+                }
+
+                if(toggle_11.isChecked()){
+                    toggle_11.setChecked(false);
+                }else{
+                    toggle_11.setChecked(true);
+                }
+
 
 
 
