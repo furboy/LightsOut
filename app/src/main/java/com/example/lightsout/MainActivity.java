@@ -63,19 +63,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-              if(Expert.isChecked() && toggle_1.isChecked() && toggle_2.isChecked() && toggle_3.isChecked() && toggle_4.isChecked() && toggle_5.isChecked() && toggle_6.isChecked() && toggle_7.isChecked() && toggle_8.isChecked() && toggle_9.isChecked() && toggle_10.isChecked() && toggle_11.isChecked() && toggle_12.isChecked()) {
+                if (Expert.isChecked() && toggle_1.isChecked() && toggle_2.isChecked() && toggle_3.isChecked() && toggle_4.isChecked() && toggle_5.isChecked() && toggle_6.isChecked() && toggle_7.isChecked() && toggle_8.isChecked() && toggle_9.isChecked() && toggle_10.isChecked() && toggle_11.isChecked() && toggle_12.isChecked()) {
 
-                  Toast.makeText(MainActivity.this, "A winner is UwU", Toast.LENGTH_SHORT).show();
-              }
-
-                  if (toggle_1.isChecked() && toggle_2.isChecked() && toggle_3.isChecked() && toggle_4.isChecked() && toggle_5.isChecked() && toggle_6.isChecked() && toggle_7.isChecked() && toggle_8.isChecked() && toggle_9.isChecked()) {
-                      Toast.makeText(MainActivity.this, "A winner is UwU", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "A winner is UwU", Toast.LENGTH_SHORT).show();
 
 
-                  } else {
-                      Toast.makeText(MainActivity.this, "Try again", Toast.LENGTH_SHORT).show();
-                  }
-              }
+                }else if (toggle_1.isChecked() && toggle_2.isChecked() && toggle_3.isChecked() && toggle_4.isChecked() && toggle_5.isChecked() && toggle_6.isChecked() && toggle_7.isChecked() && toggle_8.isChecked() && toggle_9.isChecked()) {
+                    Toast.makeText(MainActivity.this, "A winner is UwU", Toast.LENGTH_SHORT).show();
+
+
+                } else {
+                    Toast.makeText(MainActivity.this, "Try again", Toast.LENGTH_SHORT).show();
+                }
+            }
+
 
         });
 
@@ -141,6 +142,18 @@ public class MainActivity extends AppCompatActivity {
                     toggle_10.setVisibility(View.VISIBLE);
                     toggle_11.setVisibility(View.VISIBLE);
                     toggle_12.setVisibility(View.VISIBLE);
+                    toggle_1.setChecked(false);
+                    toggle_2.setChecked(false);
+                    toggle_3.setChecked(false);
+                    toggle_4.setChecked(false);
+                    toggle_5.setChecked(false);
+                    toggle_6.setChecked(false);
+                    toggle_7.setChecked(false);
+                    toggle_8.setChecked(false);
+                    toggle_9.setChecked(false);
+                    toggle_10.setChecked(false);
+                    toggle_11.setChecked(false);
+                    toggle_12.setChecked(false);
                 } else {
                     toggle_10.setClickable(false);
                     toggle_11.setClickable(false);
